@@ -1,11 +1,11 @@
 export const EnvironmentVariables = {
-  production: false,
+  production: true,
   weatherApilocationBaseURL: 'https://weather338.p.rapidapi.com/locations/search?',
   weatherapiForecasBasetURL: 'https://weather338.p.rapidapi.com/weather/forecast?',
 
   xRapidApiKeyName: 'X-RapidAPI-Key',
-  xRapidApiKeyValue: '', // leave empty in dev
+  xRapidApiKeyValue: process.env['WEATHER_API_KEY'] || '',
 
   xRapidApiHostName: 'X-RapidAPI-Host',
-  xRapidApiHostValue: '' // leave empty in dev
+  xRapidApiHostValue: process.env['WEATHER_API_HOST'] || ''
 };
