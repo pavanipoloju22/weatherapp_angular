@@ -2,15 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "dist/Weatherapp/**",
+      "src": "dist/weatherapp/**",
       "use": "@vercel/static"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
-
